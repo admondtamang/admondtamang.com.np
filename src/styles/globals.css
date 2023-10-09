@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply !scroll-smooth;
+  }
+
+  body {
+    @apply text-content-body;
+    @apply font-content;
+  }
+
+  h1 {
+    @apply text-h1;
+  }
+
+  h2 {
+    @apply text-h2;
+  }
+
+  h3 {
+    @apply text-h3;
+  }
+
+  h4 {
+    @apply text-h4;
+  }
+
+  h5 {
+    @apply text-h5;
+  }
+
+  h6 {
+    @apply text-h6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-content-heading;
+    @apply font-heading;
+  }
+
+  p {
+    @apply text-content-body;
+    @apply font-content;
+  }
+  button {
+    @apply font-content;
+  }
+
+  .animate-default {
+    @apply transition-all duration-500;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+}
+
+.nue {
+  @apply rounded border-2 border-black hover:bg-accent-600 hover:text-accent-50;
+}
+
+.nue-rounded {
+  @apply border-2 border-black hover:bg-accent-600 hover:text-accent-50;
+}
+
+.nue-button {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition:
+    box-shadow 0.35s,
+    top 0.3s,
+    transform 0.45s;
+  top: 0;
+  left: 0;
+  transform: rotateX(0) rotateY(0) rotateZ(0);
+  box-shadow:
+    0 1px 0 0 #102c13,
+    0 2px 0 0 #102c13,
+    0 3px 0 0 #102c13;
+}
+
+.nue-button:hover {
+  box-shadow:
+    0 0 0 0 var(--cell-border),
+    0 0 0 0 var(--cell-border),
+    0 0 0 0 var(--cell-border);
+  top: 3px;
+  transform: rotateX(5deg) rotateY(10deg) rotateZ(0.5deg);
+}
+
+.nue-button:is(:focus, :active) {
+  --outline-background: var(--color-background-primary);
+  box-shadow:
+    0 0 0 0 var(--cell-border),
+    0 0 0 0 var(--cell-border),
+    0 0 0 0 var(--cell-border),
+    0 0 0 2px var(--outline-background),
+    0 0 0 4px var(--cell-border);
+  top: 3px;
+  border: 2px solid var(--cell-border) !important;
+  outline: 0;
+}
+
+.highlight {
+  background: linear-gradient(to bottom, transparent 50%, #fce041 50%);
+}
