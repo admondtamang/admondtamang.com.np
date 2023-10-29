@@ -14,13 +14,4 @@ export const postRouter = createTRPCRouter({
   getAll: publicProcedure.query(({ ctx }) => {
     return ctx.db.posts.findMany() as Promise<Posts[]>;
   }),
-  getOne: publicProcedure.query(({ input, ctx }) => {
-    console.log(input, "hello");
-
-    return ctx.db.posts.findFirstOrThrow({
-      where: {
-        slug: input,
-      },
-    }) as Promise<Posts>;
-  }),
 });
