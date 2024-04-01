@@ -68,7 +68,7 @@ export default function Hero() {
               </a>
 
               <a href="https://github.com/admondtamang">
-                <button className="nue-button text-md shadow-offset-black rounded border-2 border-black bg-lime-300 px-6 py-2 hover:bg-indigo-600 hover:text-lime-50 dark:text-black">
+                <button className="nue-button text-md shadow-offset-black rounded border-2 border-black bg-orange-300 px-6 py-2 hover:bg-indigo-600 hover:text-lime-50 dark:text-black">
                   Github
                 </button>
               </a>

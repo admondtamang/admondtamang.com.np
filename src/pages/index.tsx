@@ -7,25 +7,20 @@ import { getMDXComponent } from "next-contentlayer/hooks";
 import Link from "next/link";
 
 function PostCard(post: Post) {
-  const Content = getMDXComponent(post.body.code);
-
   return (
-    <div className="mb-8">
+    <div className="mb-8 text-left w-full md:px-24">
       <h2 className="text-xl">
         <Link
           href={post.url}
-          className="text-blue-700 hover:text-blue-900"
-          legacyBehavior
+          className="text-gray-700 dark:text-white hover:dark:text-blue-50 hover:text-blue-900"
         >
           {post.title}
         </Link>
       </h2>
-      <time dateTime={post.date} className="mb-2 block text-xs text-gray-600">
+      <time dateTime={post.date} className="mb-2 block text-xs dark:text-gray-50 text-gray-600">
         {format(parseISO(post.date), "LLLL d, yyyy")}
       </time>
-      <div className="text-sm">
-        <Content />
-      </div>
+
     </div>
   );
 }
@@ -45,7 +40,7 @@ export default function Home() {
       />
 
       <Layout>
-        <main className="flex min-h-screen flex-col items-center justify-center gap-16 pt-8 dark:text-white">
+        <main className="flex min-h-screen flex-col items-center justify-center pt-8 dark:text-white">
           {posts.map((post, idx) => (
             <PostCard key={idx} {...post} />
           ))}

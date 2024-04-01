@@ -12,7 +12,7 @@ export default function Layout({
   return (
     <main className="bg-white font-mono transition-all duration-700 dark:bg-slate-800">
       <Header />
-      <main className={`min-h-[90vh] ${className}`}>{children}</main>
+      <main className={`min-h-[90vh] pt-4 ${className}`}>{children}</main>
     </main>
   );
 }
